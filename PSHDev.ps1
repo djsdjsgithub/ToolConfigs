@@ -8,4 +8,4 @@ choco install BoxStarter
 ."$env:APPDATA\BoxStarter\BoxStarterShell.ps1"
 
 "Installing QP Demo Configuration" | out-default
-Install-BoxstarterPackage -PackageName https://raw.githubusercontent.com/CSI-Windows/ToolConfigs/master/ConfigPshDev.txt
+Install-BoxstarterPackage -PackageName https://raw.githubusercontent.com/CSI-Windows/ToolConfigs/master/ConfigPshDev.Txt
