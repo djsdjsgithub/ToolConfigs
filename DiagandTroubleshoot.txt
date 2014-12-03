@@ -5,3 +5,4 @@ cinst procmon
 cinst procexp
 cinst regdllview
 cinst windbg
+cinst autoruns
