@@ -3,4 +3,5 @@ Install-ChocolateyPinnedTaskBarItem "$env:windir\system32\WindowsPowerShell\v1.0
 cinst bginfo
 cinst procmon
 cinst procexp
+cinst regdllview
 cinst windbg
