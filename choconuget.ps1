@@ -8,4 +8,4 @@ choco install BoxStarter
 ."$env:APPDATA\BoxStarter\BoxStarterShell.ps1"
 
 "Installing Diag Tools Demo Configuration" | out-default
-Install-BoxstarterPackage -PackageName https://raw.githubusercontent.com/CSI-Windows/ToolConfigs/master/choconuget.txt
+Install-BoxstarterPackage -PackageName https://raw.githubusercontent.com/CSI-Windows/ToolConfigs/master/configchoconuget.txt
