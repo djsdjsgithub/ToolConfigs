@@ -4,3 +4,4 @@ cinst warmup
 cinst git
 choco install chocolatey.server
 cinst powershell
+cinst ChocolateyDeploymentUtils
