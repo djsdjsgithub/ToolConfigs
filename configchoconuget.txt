@@ -8,6 +8,10 @@ Install-ChocolateyPinnedTaskBarItem "$env:windir\system32\WindowsPowerShell\v1.0
 cinst powershell
 
 Import-Module servermanager
+Add-WindowsFeature Web-Webserver
+add-windowsfeature Web-ISAPI-Ext
+add-windowsfeature Web-ISAPI-Filter
+
 #Add-WindowsFeature NET-Framework-45-ASPNET (2012/Win8)
 add-WindowsFeature Web-Asp-Net
 add-WindowsFeature Web-Asp-Net45
@@ -16,8 +20,7 @@ Add-WindowsFeature web-http-logging
 Add-WindowsFeature web-static-content
 add-windowsfeature  Web-Stat-Compression
 add-windowsfeature  Web-filtering
-add-windowsfeature Web-ISAPI-Ext
-add-windowsfeature Web-ISAPI-Filter
+
 add-windowsfeature Web-Mgmt-Console
 add-windosfeature Web-Basic-Auth
 
