@@ -99,3 +99,5 @@ New-WebApplication "$projectName" -Site "$projectname" -PhysicalPath $webInstall
 "Open proper firewall rules" | Out-Default
 netsh advfirewall firewall add rule name="Open Port 80" dir=in action=allow protocol=TCP localport=80
 
+"Get Some packages" | Out-default
+cinst wget
