@@ -6,4 +6,5 @@ choco install chocolatey.server
 cinst ChocolateyDeploymentUtils
 cinst powershell
 
+Import-Module servermanager
 Install-WindowsFeature -Name Web-Server,Web-Asp-Net45 -Verbose
