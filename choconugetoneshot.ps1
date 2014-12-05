@@ -15,7 +15,7 @@ cinst chocolatey.server
 
 "***** > Enable Web Services" | Out-Default
 
-If ($IsDesktop) {cinst webpi;$env:path += 'C:\Program Files\Microsoft\Web Platform Installer\'} else {import-module servermanager}
+If ($IsDesktop) {cinst webpi;$env:path += 'C:\Program Files\Microsoft\Web Platform Installer\';"`r`n`r`n***** Close the Web Platform Installer (WebPi) if it displays`r`n`r`n" | out-default} else {import-module servermanager}
 
 If ($IsDesktop) {cinst IIS-WebServerRole -source WindowsFeatures} Else {add-windowsfeature Web-Server}
 If ($IsDesktop) {cinst ASPNET -source webpi} Else {add-windowsfeature Web-Asp-Net}
