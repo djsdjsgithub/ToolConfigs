@@ -5,3 +5,5 @@ cinst git
 choco install chocolatey.server
 cinst ChocolateyDeploymentUtils
 cinst powershell
+
+Install-WindowsFeature -Name Web-Server,Web-Asp-Net45 -Verbose
