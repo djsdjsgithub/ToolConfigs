@@ -43,7 +43,7 @@ If ($IsDesktop) {cinst IIS-ASPNet45 -source WindowsFeatures} Else {Add-WindowsFe
 
 } Else {
 cinst ASPNET_REGIIS -source webpi
-#."$env:windir\microsoft.net\framework\v4.0.30319\aspnet_regiis.exe" -i
+."$env:windir\microsoft.net\framework\v4.0.30319\aspnet_regiis.exe" -i
 }
 
 "***** > Chocolatey Server Config" | Out-Default
@@ -100,5 +100,22 @@ New-WebApplication "$projectName" -Site "$projectname" -PhysicalPath $webInstall
 "Open proper firewall rules" | Out-Default
 netsh advfirewall firewall add rule name="Open Port 80" dir=in action=allow protocol=TCP localport=80
 
-"Get Some packages" | Out-default
+"`r`n`r`n DOING A TEST`r`n`r`n" | Out-Default
+
 cinst wget
+
+"Getting procmon source package from Chocolatey..." | out-default
+cd "$env:chocolateyinstall\chocolateyinstall"
+wget http://chocolatey.org/api/v2/package/procmon/ --no-check-certificate
+
+"Pushing to new repository..." | out-default
+.\nuget.exe setapikey testing -source "http://localhost/chocolatey/"
+.\nuget.exe delete procmon 3.01 -apikey testing -source "http://localhost/chocolatey"
+.\nuget.exe push .\procmon.3.01.nupkg -apikey testing -source "http://localhost/chocolatey"
+
+"Installing Procmon from new repository..." | out-default
+choco install procmon -source "http://localhost/chocolatey"
+
+If the procmon package transactions were successful your repository is ready to go.
+
+#start http://localhost/chocolaty
