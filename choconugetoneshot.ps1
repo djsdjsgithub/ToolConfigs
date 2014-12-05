@@ -101,7 +101,7 @@ New-WebApplication "$projectName" -Site "$projectname" -PhysicalPath $webInstall
 netsh advfirewall firewall add rule name="Open Port 80" dir=in action=allow protocol=TCP localport=80
 
 "`r`n`r`n DOING A TEST`r`n`r`n" | Out-Default
-
+If (Test-Path alias:wget) {remove-item alias:wget}
 cinst wget
 
 "Getting procmon source package from Chocolatey..." | out-default
