@@ -116,6 +116,8 @@ wget http://chocolatey.org/api/v2/package/procmon/ --no-check-certificate
 "Installing Procmon from new repository..." | out-default
 choco install procmon -source "http://localhost/chocolatey"
 
-If the procmon package transactions were successful your repository is ready to go.
+"If the procmon package transactions were successful your repository is ready to go." | out-default
+
+"To install from this repo use:`r`n`r`n choco install procmon -source `"http://$env:computername/chocolatey`"" | out-default
 
 #start http://localhost/chocolaty
