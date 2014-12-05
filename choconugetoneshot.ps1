@@ -1,5 +1,3 @@
-5 December 2014 11:24:31
-
 "***** > Getting Started..." | out-default
 set-executionpolicy bypass -force
 iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1')) 
