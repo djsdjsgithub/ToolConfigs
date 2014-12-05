@@ -4,7 +4,7 @@
 Install-ChocolateyPinnedTaskBarItem "$env:windir\system32\WindowsPowerShell\v1.0\PowerShell.exe"
 
 #cinst DotNet4.5
-cinst DotNet4.5.2
+#cinst DotNet4.5.2
 cinst powershell
 
 Import-Module servermanager
