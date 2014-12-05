@@ -109,11 +109,15 @@ cd "$env:chocolateyinstall\chocolateyinstall"
 wget http://chocolatey.org/api/v2/package/procmon/ --no-check-certificate
 
 "Pushing to new repository..." | out-default
-.\nuget.exe setapikey testing -source "http://localhost/chocolatey/"
-.\nuget.exe delete procmon 3.01 -apikey testing -noprompt -source "http://localhost/chocolatey"
-.\nuget.exe push .\procmon.3.01.nupkg -apikey testing -source "http://localhost/chocolatey"
+#.\nuget.exe setapikey testing -source "http://localhost/chocolatey/"
+#.\nuget.exe delete procmon 3.01 -apikey testing -noprompt -source "http://localhost/chocolatey"
+#.\nuget.exe push .\procmon.3.01.nupkg -apikey testing -source "http://localhost/chocolatey"
 
+copy-item *.nupkg $webInstallDir\app_data\packages -force
 remove-item *.nupkg -force
+
+"Listing packages in new repository..." | out-default
+choco list -source "http://localhost/chocolatey"
 
 "Installing Procmon from new repository..." | out-default
 choco install procmon -source "http://localhost/chocolatey"
