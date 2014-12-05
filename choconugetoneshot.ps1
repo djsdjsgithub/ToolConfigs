@@ -124,6 +124,9 @@ choco install procmon -source "http://localhost/chocolatey"
 
 "If the procmon package transactions were successful your repository is ready to go." | out-default
 
-"To install from this repo use:`r`n`r`n choco install procmon -source `"http://$env:computername/chocolatey`"" | out-default
+"To install from this repo on the local machine use:`r`n`r`n choco install procmon -source `"http://$env:computername/chocolatey`"" | out-default
+
+"if this was built on Azure, on a different machine use:`r`n`r`n choco install procmon -source `"http://<azureserviceurl>/chocolatey`"" | out-default
+
 
 #start http://localhost/chocolaty
