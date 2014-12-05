@@ -3,5 +3,5 @@ Install-ChocolateyPinnedTaskBarItem "$env:windir\system32\WindowsPowerShell\v1.0
 cinst warmup
 cinst git
 choco install chocolatey.server
-cinst powershell
 cinst ChocolateyDeploymentUtils
+cinst powershell
