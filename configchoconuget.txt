@@ -17,7 +17,12 @@ add-windowsfeature  Web-Stat-Compression
 add-windowsfeature  Web-filtering
 add-windowsfeature Web-ISAPI-Ext
 add-windowsfeature Web-ISAPI-Filter
+add-windowsfeature Web-Mgmt-Console
+add-windosfeature Web-Basic-Auth
 
+#Configure WebServer
+new-item c:\NugetRepo -ItemType Directory -force
+new-item c:\Sites\NugetRepo -ItemType Directory -force
 
 choco install chocolatey.server
 cinst ChocolateyDeploymentUtils
