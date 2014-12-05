@@ -10,6 +10,7 @@ cinst powershell
 Import-Module servermanager
 #Add-WindowsFeature NET-Framework-45-ASPNET (2012/Win8)
 add-WindowsFeature Web-Asp-Net
+add-WindowsFeature Web-Asp-Net45
 Add-WindowsFeature NET-HTTP-Activation
 Add-WindowsFeature web-http-logging
 Add-WindowsFeature web-static-content
