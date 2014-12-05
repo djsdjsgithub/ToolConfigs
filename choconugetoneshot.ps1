@@ -113,6 +113,8 @@ wget http://chocolatey.org/api/v2/package/procmon/ --no-check-certificate
 .\nuget.exe delete procmon 3.01 -apikey testing -source "http://localhost/chocolatey"
 .\nuget.exe push .\procmon.3.01.nupkg -apikey testing -source "http://localhost/chocolatey"
 
+remove-item *.nupkg -force
+
 "Installing Procmon from new repository..." | out-default
 choco install procmon -source "http://localhost/chocolatey"
 
