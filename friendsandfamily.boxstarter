@@ -15,3 +15,6 @@ choco install adblockplusie
 choco install adblockpluschrome
 cinst malwarebytes
 cinst powershell
+cinst dotnet4.5
+cinst vcredist2010
+cinst vcredist2008
