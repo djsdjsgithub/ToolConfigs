@@ -7,5 +7,11 @@ cinst flashplayerplugin
 cinst adobeshockwaveplayer
 cinst InkScape
 cinst vlc
-choco install skype
+cinst skype
+cinst defraggler
+cinst ccleaner
+cinst ccenhancer
+choco install adblockplusie
+choco install adblockpluschrome
+cinst malwarebytes
 cinst powershell
