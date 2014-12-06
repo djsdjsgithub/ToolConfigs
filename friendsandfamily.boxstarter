@@ -1,0 +1,34 @@
+#http://blog.ittoby.com/2014/07/setup-your-own-chocoloateynuget.html
+
+Install-ChocolateyPinnedTaskBarItem "$env:windir\system32\WindowsPowerShell\v1.0\PowerShell.exe"
+
+#cinst DotNet4.5
+#cinst DotNet4.5.2
+cinst powershell
+
+Import-Module servermanager
+Add-WindowsFeature Web-Webserver
+add-windowsfeature Web-ISAPI-Ext
+add-windowsfeature Web-ISAPI-Filter
+
+#Add-WindowsFeature NET-Framework-45-ASPNET (2012/Win8)
+add-WindowsFeature Web-Asp-Net
+add-WindowsFeature Web-Asp-Net45
+Add-WindowsFeature NET-HTTP-Activation
+Add-WindowsFeature web-http-logging
+Add-WindowsFeature web-static-content
+add-windowsfeature  Web-Stat-Compression
+add-windowsfeature  Web-filtering
+
+add-windowsfeature Web-Mgmt-Console
+add-windosfeature Web-Basic-Auth
+
+#Configure WebServer
+new-item c:\NugetRepo -ItemType Directory -force
+new-item c:\Sites\NugetRepo -ItemType Directory -force
+
+choco install chocolatey.server
+cinst ChocolateyDeploymentUtils
+
+cinst warmup
+cinst git
