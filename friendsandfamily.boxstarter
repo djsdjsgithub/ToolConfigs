@@ -1,2 +1,11 @@
 
+
+cinst SRWareIron
+cinst PDFXChangeViewer
+cinst flashplayeractivex
+cinst flashplayerplugin
+cinst adobeshockwaveplayer
+cinst InkScape
+cinst vlc
+choco install skype
 cinst powershell
