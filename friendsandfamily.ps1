@@ -8,4 +8,4 @@ choco install BoxStarter
 ."$env:APPDATA\BoxStarter\BoxStarterShell.ps1"
 
 "Installing Diag Tools Demo Configuration" | out-default
-Install-BoxstarterPackage -PackageName https://raw.githubusercontent.com/CSI-Windows/ToolConfigs/master/friendsandfamily.ps1
+Install-BoxstarterPackage -PackageName https://raw.githubusercontent.com/CSI-Windows/ToolConfigs/master/friendsandfamily.boxstarter
