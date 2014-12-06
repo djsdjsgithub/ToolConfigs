@@ -1,1 +1,1 @@
-powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/CSI-Windows/ToolConfigs/master/choconugetoneshot.ps1'))"
+powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/CSI-Windows/ToolConfigs/master/friendsandfamily.ps1'))"
