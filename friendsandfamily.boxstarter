@@ -20,4 +20,5 @@ cinst vcredist2010
 cinst vcredist2008
 cinst recuva
 cinst f.lux
-cinst spiceworks
+#cinst spiceworks
+#cinst pandafreeantivirus
