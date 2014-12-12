@@ -1,0 +1,21 @@
+
+"Disabling IE ESC So it is Usable" | out-default
+Disable-InternetExplorerESC
+
+"Disabling Updates" | out-default
+Disable-MicrosoftUpdate
+
+"Enabling Remote Desktop" | out-default
+Enable-RemoteDesktop
+
+"Install Classic Sheel Start Menu" | out-default
+cinst bginfo
+
+"Install Procmon and Procexp" | out-default
+cinst procmon
+cinst procexp
+
+"Install Classic Sheel Start Menu" | out-default
+cinst classic-shell
+
+"TODO: Install Classic Sheel Start Menu" | out-default
