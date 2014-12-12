@@ -1,21 +1,23 @@
 
-"Disabling IE ESC So it is Usable" | out-default
+
+">>>> Disabling IE ESC So it is Usable" | write-host -foreground yellow
 Disable-InternetExplorerESC
 
-"Disabling Updates" | out-default
+"Disabling Updates" | write-host -foreground yellow
 Disable-MicrosoftUpdate
 
 "Enabling Remote Desktop" | out-default
 Enable-RemoteDesktop
 
-"Install Classic Sheel Start Menu" | out-default
+"Install Classic Sheel Start Menu" | write-host -foreground yellow
 cinst bginfo
 
-"Install Procmon and Procexp" | out-default
+"Install Procmon and Procexp" | write-host -foreground yellow
 cinst procmon
 cinst procexp
 
-"Install Classic Sheel Start Menu" | out-default
-cinst classic-shell
+"Install Classic Sheel Start Menu" | write-host -foreground yellow
+#Fails on Server 2012 - investigate.  DJS 12/12/2014
+#cinst classic-shell
 
 "TODO: Install Classic Sheel Start Menu" | out-default
