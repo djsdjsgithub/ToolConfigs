@@ -12,5 +12,8 @@ $env:path = "$($env:ALLUSERSPROFILE)\chocolatey\bin;$($env:Path)"
 choco install BoxStarter
 ."$env:APPDATA\BoxStarter\BoxStarterShell.ps1"
 
+"`r`n`r`n[TODO] Adding Qompat NuGet Repository" | out-default
+#choco source -name Qompat -source ???
+
 "`r`n`r`nKicking off box with given URL..." | out-default
 Install-BoxstarterPackage -PackageName  https://raw.githubusercontent.com/CSI-Windows/ToolConfigs/master/BASE-SRV.boxstart
