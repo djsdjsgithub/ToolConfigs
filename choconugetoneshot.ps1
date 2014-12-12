@@ -63,7 +63,8 @@ Remove-WebSite -Name "Default Web Site" -ErrorAction SilentlyContinue
 Remove-WebSite -Name "$projectname" -ErrorAction SilentlyContinue
 New-WebSite -ID 1 -Name "$projectname" -Port 80 -PhysicalPath "$webInstallDir" -Force
  
-$networkSvc = 'NT AUTHORITY\NETWORK SERVICE'
+If ($IsDesktop) {$networkSvc = 'NT AUTHORITY\NETWORK SERVICE'} Else {$networkSvc = "IIS APPPOOL\DefaultAppPool"}
+
 "Setting folder permissions on `'$webInstallDir`' to 'Read' for user $networkSvc" | Out-default
 $acl = Get-Acl $webInstallDir
 $acl.SetAccessRuleProtection($False, $True)
@@ -78,6 +79,16 @@ $acl.SetAccessRuleProtection($False, $True)
 $rule = New-Object System.Security.AccessControl.FileSystemAccessRule("$networkSvc","Modify", "ContainerInherit, ObjectInherit", "None", "Allow");
 $acl.AddAccessRule($rule);
 Set-Acl $webInstallAppDataDir $acl
+
+If (!$Desktop) {
+$webInstallAppDataDir = Join-Path $webInstallDir 'App_Data'
+"Setting folder permissions on `'$webInstallAppDataDir`' to 'Modify' for user $networkSvc" | Out-Default
+$acl = Get-Acl $webInstallAppDataDir
+$acl.SetAccessRuleProtection($False, $True)
+$rule = New-Object System.Security.AccessControl.FileSystemAccessRule("IUSR","Modify", "ContainerInherit, ObjectInherit", "None", "Allow");
+$acl.AddAccessRule($rule);
+Set-Acl $webInstallAppDataDir $acl
+}
 
 # Import-Module WebAdministration
 $appPoolPath = "IIS:\AppPools\$projectName"
