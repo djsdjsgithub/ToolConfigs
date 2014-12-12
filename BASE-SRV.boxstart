@@ -9,8 +9,9 @@ Disable-MicrosoftUpdate
 "Enabling Remote Desktop" | out-default
 Enable-RemoteDesktop
 
-"Install Classic Sheel Start Menu" | write-host -foreground yellow
+"Install BGinfo" | write-host -foreground yellow
 cinst bginfo
+"TODO: Configure BGinfo" | write-host -foreground yellow
 
 "Install Procmon and Procexp" | write-host -foreground yellow
 cinst procmon
