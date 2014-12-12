@@ -13,4 +13,4 @@ choco install BoxStarter
 ."$env:APPDATA\BoxStarter\BoxStarterShell.ps1"
 
 "`r`n`r`nKicking off box with given URL..." | out-default
-Install-BoxstarterPackage -PackageName $ConfigURL
+Install-BoxstarterPackage -PackageName  https://raw.githubusercontent.com/CSI-Windows/ToolConfigs/master/BASE-SRV.boxstart
