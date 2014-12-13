@@ -20,5 +20,5 @@ cinst bginfo
 cinst procmon
 cinst procexp
 
-"Enabling Win-RM Remoting" | out-default
+"Enabling Win-RM Remoting" | out-default -foreground yellow
 Enable-PSRemoting -Force -ErrorAction Continue
