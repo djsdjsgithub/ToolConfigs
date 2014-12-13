@@ -20,8 +20,5 @@ cinst bginfo
 cinst procmon
 cinst procexp
 
-"Install Classic Sheel Start Menu" | write-host -foreground yellow
-#Fails on Server 2012 - investigate.  DJS 12/12/2014
-#cinst classic-shell
-
-"TODO: Install Classic Sheel Start Menu" | out-default
+"Enabling Win-RM Remoting" | out-default
+Enable-PSRemoting -Force -ErrorAction Continue
