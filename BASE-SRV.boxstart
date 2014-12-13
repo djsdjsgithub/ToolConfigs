@@ -22,3 +22,6 @@ cinst procexp
 
 "Enabling Win-RM Remoting" | out-default -foreground yellow
 Enable-PSRemoting -Force -ErrorAction Continue
+
+"TODO: Activate Windows so no-one forgets" | out-default -foreground yellow
+#(gwmi softwarelicensingservice).RefreshLicenseStatus()
