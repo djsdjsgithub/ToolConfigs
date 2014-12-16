@@ -11,3 +11,5 @@ $env:path = "$($env:ALLUSERSPROFILE)\chocolatey\bin;$($env:Path)"
 "`r`n`r`nChocolately Installed, Now Installing BoxStarter" | out-default
 choco install BoxStarter
 ."$env:APPDATA\BoxStarter\BoxStarterShell.ps1"
+
+choco install powershell
