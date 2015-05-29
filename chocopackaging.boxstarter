@@ -1,6 +1,6 @@
-choco install warmup
-choco install git
-choco install nuget.commandline
+choco install -y warmup
+choco install -y git
+choco install -y nuget.commandline
 $env:path = $env:path + ";C:\Program Files (x86)\git\cmd"
 cd $env:chocolateyinstall
 git clone https://github.com/chocolatey/chocolateytemplates.git
